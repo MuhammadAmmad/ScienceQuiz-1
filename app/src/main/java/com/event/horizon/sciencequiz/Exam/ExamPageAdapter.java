@@ -66,6 +66,7 @@ public class ExamPageAdapter extends FragmentStatePagerAdapter {
            count = exams.size();
             notifyDataSetChanged();
             examFormatList=exams;
+            bundle.putInt("totalPage",count);
           // bundle.putString("question", exams.get(currentPosition).getQuestion());
            // Log.d(TAG,"current position "+currentPosition);
 

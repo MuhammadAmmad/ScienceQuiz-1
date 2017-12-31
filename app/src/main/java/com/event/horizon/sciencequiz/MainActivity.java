@@ -1,6 +1,8 @@
 package com.event.horizon.sciencequiz;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.support.design.widget.FloatingActionButton;
@@ -62,12 +64,27 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+
+        SharedPreferences prefs = getSharedPreferences("score", MODE_PRIVATE);
+
+
+
+        int grade1Score=prefs.getInt("grade1",0);
+        int grade2Score=prefs.getInt("grade2",0);
+        int grade3Score=prefs.getInt("grade3",0);
+        int grade4Score=prefs.getInt("grade4",0);
+        int grade5Score=prefs.getInt("grade5",0);
+
+
+
+
+
         ArrayList<Grade> grades=new ArrayList<Grade>();
-        grades.add(new Grade(82,R.drawable.grade1));
-        grades.add(new Grade(63,R.drawable.grade2));
-        grades.add(new Grade(74,R.drawable.grade3));
-        grades.add(new Grade(56,R.drawable.grade4));
-        grades.add(new Grade(67,R.drawable.grade5));
+        grades.add(new Grade(grade1Score,R.drawable.grade1));
+        grades.add(new Grade(grade2Score,R.drawable.grade2));
+        grades.add(new Grade(grade3Score,R.drawable.grade3));
+        grades.add(new Grade(grade4Score,R.drawable.grade4));
+        grades.add(new Grade(grade5Score,R.drawable.grade5));
 
 
 

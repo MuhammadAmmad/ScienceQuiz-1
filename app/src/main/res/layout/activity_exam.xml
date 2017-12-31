@@ -6,11 +6,32 @@
     android:layout_height="wrap_content"
     tools:context="com.event.horizon.sciencequiz.Exam.ExamActivity">
 
-<android.support.v4.view.ViewPager
-    android:id="@+id/view_pager"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    <com.event.horizon.sciencequiz.Exam.CustomViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</android.support.v4.view.ViewPager>
+
+    </com.event.horizon.sciencequiz.Exam.CustomViewPager>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loading_indicator"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:indicatorColor="#47e451"
+        app:indicatorName="BallGridPulseIndicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
 
 </android.support.constraint.ConstraintLayout>
